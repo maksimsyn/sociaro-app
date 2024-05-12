@@ -1,0 +1,141 @@
++b('page-footer')
+  flex-shrink: 0
+  background-color: $color-semiblack
+
+  +e('container')
+    max-width: 1240px
+
+  +e('top')
+    display: flex
+    justify-content: space-between
+    padding-top: 62px
+    padding-bottom: 70px
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3)
+
+  +e('bottom')
+    display: flex
+    padding-top: 38px
+    padding-bottom: 38px
+
+  +e('home')
+    display: inline-block
+    margin-bottom: 30px
+
+  +e('desc')
+    font-size: 14px
+    line-height: 21px
+    color: rgba(#BDC6CF, 0.7)
+
+  +e('list')
+    margin-top: auto
+    display: flex
+    flex-direction: column
+
+  +e('title')
+    font-size: 14px
+    line-height: 17px
+    font-weight: 700
+    color: $color-white
+    text-transform: uppercase
+    margin: 0 0 28px
+
+  +e('link')
+    font-size: 14px
+    line-height: 18px
+    letter-spacing: 0.03em
+    color: $color-white
+    transition: all 0.2s ease-out
+
+    &:hover
+      color: #BDC6CF
+
+    +m('upper')
+      text-transform: uppercase
+
+  +e('item')
+    &:not(:last-of-type)
+      margin-bottom: 20px
+
+  +e('col')
+    display: flex
+    flex-direction: column
+    max-width: 264px
+
+    &:not(:last-of-type)
+      margin-right: 30px
+
+    +media($screen-xxl)
+      min-width: 140px
+
+      &:not(:last-of-type)
+        margin-right: 60px
+
+  +e('input')
+    box-sizing: border-box
+    width: 178px
+    padding: 15px 20px 12px 50px
+    background-color: rgba(#5E6977, 0.3)
+    border-radius: 3px
+    color: rgba(#EBEBEB, 0.5)
+    border: 1px solid transparent
+    +ts()
+
+    &:focus
+      border-color: $color-white
+
+  +e('form')
+    position: relative
+
+  +e('search')
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 1
+    height: 45px
+    width: 50px
+    display: flex
+    align-items: center
+    justify-content: center
+
+  +e('socials')
+    margin-top: auto
+
+  +e('subject')
+    font-size: 14px
+    line-height: 14px
+    color: #EBEBEB
+    display: inline-block
+    margin-bottom: 20px
+
+  +e('socials-list')
+    display: flex
+
+  +e('socials-item')
+    &:not(:last-of-type)
+      margin-right: 20px
+
+  +e('socials-link')
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: rgba(#5E6977, 0.3)
+    border-radius: 50%
+    width: 45px
+    height: 45px
+
+  +e('copy')
+    display: inline-block
+    margin-right: auto
+
+  +e('small-link')
+    font-size: 12px
+    line-height: 14px
+    color: rgba(#EBEBEB, 0.5)
+    transition: all 0.2s ease-out
+
+    &[href]:hover
+      color: #EBEBEB
+
+    &:not(:last-of-type)
+      margin-right: 32px
+

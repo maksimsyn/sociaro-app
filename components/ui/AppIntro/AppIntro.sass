@@ -1,0 +1,227 @@
++b('intro')
+  display: flex
+  flex-direction: column
+  box-sizing: border-box
+  height: 100vh
+  //height: calc(100vh - 100px)
+  //padding-bottom: 60px
+
+  +e('content')
+    height: 100%
+    flex-grow: 1
+    position: relative
+
+  +e('slider')
+    height: 100%
+
+  +e('slide')
+    display: flex
+    justify-content: center
+    align-items: center
+
+    +ie()
+      justify-content: flex-start
+
+    &.swiper-slide-active
+      .intro__counter,
+      .intro__title,
+      .intro__desc
+        transform: matrix(1, 0, 0, 1, 0, 0)
+
+      .intro__btn-wrapper
+        opacity: 1
+
+      .intro__counter
+        transition-delay: 0.6s
+
+      .intro__title
+        transition-delay: 0.7s
+
+      .intro__desc
+        transition-delay: 0.8s
+
+      .intro__btn-wrapper
+        transition-delay: 0.9s
+
+      .intro__img
+        opacity: 1
+
+  +e('box')
+    width: 100%
+    box-sizing: border-box
+    margin: 0 auto
+    max-width: 1240px
+    //padding: 0 30px
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  +e('counter')
+    display: block
+    font-size: 20px
+    line-height: 30px
+    font-weight: 400
+    text-transform: uppercase
+    font-family: $font-family-second
+    position: relative
+    transform: translateY(100%)
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1)
+
+  +e('title')
+    font-weight: 400
+    text-transform: uppercase
+    transform: translateY(100%)
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1)
+
+  +e('desc')
+    font-size: 16px
+    line-height: 24px
+    transform: translateY(100%)
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1)
+
+  +e('counter-wrapper')
+    margin-bottom: 8px
+    overflow: hidden
+
+  +e('title-wrapper')
+    padding-left: 30px
+    margin-bottom: 10px
+    overflow: hidden
+
+  +e('desc-wrapper')
+    padding-left: 30px
+    margin-bottom: 36px
+    overflow: hidden
+
+  +e('btn-wrapper')
+    padding-left: 30px
+    overflow: hidden
+    opacity: 0
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1)
+
+  +e('col')
+    +m('left')
+      flex-shrink: 0
+
+    +m('right')
+      margin-left: 30px
+
+  +e('arrow')
+    position: absolute
+    top: 50%
+    z-index: 5
+    fill: none
+    +ts()
+
+    &::before
+      content: ''
+      width: 100px
+      height: 100px
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translateY(-50%) translateX(-50%)
+
+    .icon
+      transition: inherit
+      stroke: $color-semiblack
+
+    &.swiper-button-disabled
+      opacity: 0
+      visibility: hidden
+
+    &:hover
+      .icon
+        stroke: $color-red
+
+    +m('left')
+      left: 10px
+      transform: translateY(-50%) rotate(180deg)
+
+      +media($screen-xl)
+        left: 2vw
+
+      +media($screen-xxl)
+        left: calc((100% - 1280px) / 2)
+
+    +m('right')
+      right: 10px
+      transform: translateY(-50%)
+
+      +media($screen-xl)
+        right: 2vw
+
+        .icon
+          stroke: $color-white
+
+      +media($screen-xxl)
+        right: calc((100% - 1280px) / 2 - 30px)
+
+  +e('scroll-down')
+    position: absolute
+    bottom: 60px
+    z-index: 5
+    transform: rotate(-90deg)
+    font-size: 12px
+    line-height: 14px
+    font-feature-settings: 'liga' off
+    color: $color-semiblack
+
+    &::before
+      content: ''
+      position: absolute
+      left: 28px
+      top: -14px
+      width: 4px
+      height: 60px
+      background-image: url("data:image/svg+xml,%0A%3Csvg width='4' height='61' viewBox='0 0 4 61' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.82323 60.1768C1.92086 60.2744 2.07915 60.2744 2.17678 60.1768L3.76777 58.5858C3.8654 58.4882 3.8654 58.3299 3.76777 58.2322C3.67014 58.1346 3.51185 58.1346 3.41422 58.2322L2 59.6465L0.585789 58.2322C0.488158 58.1346 0.329867 58.1346 0.232236 58.2322C0.134605 58.3299 0.134605 58.4882 0.232236 58.5858L1.82323 60.1768ZM1.75 1.09278e-08L1.75 60L2.25 60L2.25 -1.09278e-08L1.75 1.09278e-08Z' fill='black'/%3E%3C/svg%3E%0A")
+      background-position: center
+      background-repeat: no-repeat
+      background-size: contain
+      transform: rotate(90deg)
+      +ts()
+      backface-visibility: hidden
+
+    &:hover
+      &::before
+        transform: translateX(-10px) rotate(90deg)
+
+    +media($screen-xxl)
+      bottom: 115px
+      left: calc((100% - 1280px) / 2)
+
+  +e('link')
+    width: 100%
+    height: 100%
+    display: block
+
+  +e('img')
+    position: relative
+    right: -130px
+    will-change: width, height, left, top
+    backface-visibility: hidden
+    opacity: 0
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1)
+
+  +e('cover')
+    width: 100%
+    height: 100%
+    top: 0
+    background-color: $color-white
+    position: absolute
+    right: -130px
+    pointer-events: none
+    z-index: 1
+
+  +e('picture')
+    position: relative
+
+  +e('figure')
+    +media($screen-xxl)
+      max-width: 795px
+      max-height: 488px
+
+
+
+
+

@@ -1,0 +1,46 @@
++b('pagination')
+  border-bottom: 1px solid #495057
+
+  +e('list')
+    display: flex
+    background-color: $color-semiblack
+
+  +e('item')
+    box-sizing: border-box
+    width: 50%
+
+    +m('prev')
+      border-right: 1px solid #495057
+
+      .pagination__link
+        padding-right: 0
+
+      .pagination__figure
+        margin-right: 24px
+
+    +m('next')
+      .pagination__link
+        flex-direction: row-reverse
+        padding-left: 0
+
+      .pagination__figure
+        margin-left: 24px
+
+  +e('link')
+    box-sizing: border-box
+    padding: 76px 56px
+    display: flex
+    align-items: center
+    height: 100%
+    width: 100%
+
+  +e('phrase')
+    display: inline-block
+    font-size: 18px
+    line-height: 35px
+    color: $color-white
+    text-transform: uppercase
+    margin-bottom: 14px
+
+  +e('title')
+    color: $color-white

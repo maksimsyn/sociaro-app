@@ -1,0 +1,297 @@
++b('project')
+  +e('intro')
+    position: relative
+
+  +e('pagination')
+    display: flex
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    bottom: 85px
+    z-index: 2
+
+  +e('page')
+    &:not(:last-of-type)
+      margin-right: 20px
+
+  +e('page-btn')
+    width: 8px
+    height: 8px
+    border-radius: 50%
+    background-color: rgba($color-semiblack, 0.3)
+    position: relative
+    +ts()
+
+    &::before
+      content: ''
+      width: 16px
+      height: 16px
+      +absolute-center()
+
+    +m('active')
+      transform: scale(1.1)
+      background-color: $color-semiblack
+
+      &::after
+        content: ''
+        width: 20px
+        height: 20px
+        border-radius: inherit
+        border: 1px solid currentColor
+        opacity: 0.3
+        +absolute-center()
+
+    &:hover
+      background-color: $color-semiblack
+
+      &::after
+        opacity: 1
+
+
+  +e('intro-slider')
+    height: 100vh
+
+  +e('intro-slide')
+    background-repeat: no-repeat
+    background-size: 100% 100vh
+    background-position: center
+
+  +e('slide-container')
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+  +e('slide-title')
+    margin-bottom: 22px
+    position: relative
+
+    &::before
+      content: 'project'
+      text-transform: uppercase
+      font-size: 20px
+      line-height: 38px
+      position: absolute
+      top: -50px
+      left: -50px
+      color: currentColor
+
+  +e('slide-text')
+    font-size: 16px
+    line-height: 26px
+    text-align: center
+    max-width: 455px
+
+  +e('scroll-down')
+    display: flex
+    text-align: left
+    flex-direction: row-reverse
+    position: absolute
+    top: 50%
+    transform: rotate(-90deg) translateY(-50%)
+    left: calc((100% - 1280px) / 2 + 30px)
+    font-size: 12px
+    line-height: 14px
+    color: $color-semiblack
+    z-index: 2
+
+    .icon
+      transform: rotate(90deg)
+      position: relative
+      left: -40px
+      top: -14px
+      fill: none
+
+  +e('all-projects')
+    display: flex
+    align-items: center
+    font-size: 12px
+    line-height: 30px
+    color: $color-semiblack
+    position: absolute
+    left: calc((100% - 1280px) / 2 + 30px)
+    bottom: 80px
+    z-index: 2
+
+    .icon
+      stroke: currentColor
+      transform: rotate(180deg)
+      margin-right: 12px
+
+  +e('content')
+    padding-top: 60px
+
+  +e('col')
+    +m('bordered')
+      padding-top: 64px
+      padding-bottom: 94px
+      border-bottom: 1px solid $color-black
+
+    +m('left')
+      max-width: 316px
+      width: 100%
+      margin-right: 50px
+      flex-shrink: 0
+
+    +m('right')
+      max-width: 710px
+      width: 100%
+
+    +m('padding')
+      padding-top: 40px
+      padding-bottom: 60px
+
+  +e('inner')
+    display: flex
+    justify-content: space-between
+
+    +m('border-top')
+      border-top: 1px solid $color-black
+
+    +m('border-bottom')
+      border-bottom: 1px solid $color-black
+
+  +e('text')
+    text-align: left
+    font-size: 18px
+    line-height: 27px
+
+    +m('mb')
+      margin-bottom: 18px
+
+  +e('lead')
+    font-size: 28px
+    line-height: 45px
+
+  +e('subtitle')
+    font-weight: 700
+    font-size: 18px
+    line-height: 27px
+    margin: 0
+
+  +e('grid')
+    display: flex
+    flex-wrap: wrap
+
+  +e('grid-item')
+    margin-bottom: 76px
+
+    &:nth-child(odd)
+      width: 70%
+
+    &:nth-child(even)
+      width: 30%
+
+  +e('box')
+    &:not(:last-of-type)
+      margin-bottom: 25px
+
+    .project__text
+      max-width: none
+
+  +e('stats')
+    display: flex
+    flex-wrap: wrap
+    padding-top: 94px
+
+  +e('stat')
+    &:not(:last-of-type)
+      margin-right: 16px
+
+    +media($screen-xl)
+      &:not(:last-of-type)
+        margin-right: 62px
+
+  +e('title')
+    margin-bottom: 50px
+
+  +e('goal')
+    padding-top: 106px
+    overflow: hidden
+    position: relative
+
+  +e('circle')
+    display: none
+
+    +media($screen-xxl)
+      display: block
+      top: 106px
+      right: 0
+      transform: translateX(50%)
+      position: absolute
+
+  +e('goal-lead')
+    margin-bottom: 68px
+    max-width: 985px
+
+  +e('description')
+    max-width: 1008px
+    margin: 0 auto 170px
+
+  +e('small')
+    color: #333333
+    font-size: 16px
+    line-height: 26px
+
+    &:not(:last-of-type)
+      margin-bottom: 26px
+
+
+
+  +e('solutions-lead')
+    max-width: 985px
+    margin-bottom: 66px
+
+  +e('subtext')
+    max-width: 1000px
+    margin: 0 auto
+    width: 100%
+
+  +e('subject')
+    font-size: 32px
+    line-height: 35px
+    font-weight: 700
+    margin: 0 0 60px
+
+  +e('solutions')
+    margin-bottom: 88px
+
+  +e('solution-text')
+    font-size: 16px
+    line-height: 26px
+    margin-bottom: 58px
+
+  +e('solution-item')
+    box-sizing: border-box
+    width: 50%
+    padding-left: 35px
+    position: relative
+    font-size: 18px
+    line-height: 40px
+
+    &::before
+      content: ''
+      position: absolute
+      width: 12px
+      height: 12px
+      background-color: $color-red
+      border-radius: 50%
+      top: 14px
+      left: 0
+
+  +e('solution-list')
+    display: flex
+    flex-wrap: wrap
+    width: 526px
+
+  +e('placeholder')
+    width: 100%
+    height: 100vh
+
+
+
+
+
+
+

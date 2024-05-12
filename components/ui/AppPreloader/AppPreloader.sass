@@ -1,0 +1,25 @@
++b('preloader')
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 100
+  background-color: $color-white
+  width: 100%
+  height: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+
+  +e('bar')
+    position: relative
+
+  +e('percent')
+    font-size: 18.0027px
+    line-height: 56px
+    +absolute-center()
+
+  +e('circle')
+    path
+      opacity: 0
+      transition: all 0.1s
+      box-shadow: 20px 0 3px 0 $color-red

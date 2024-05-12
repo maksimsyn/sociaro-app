@@ -1,0 +1,160 @@
+\:root
+  --vh: 1vh
+
+.visually-hidden
+  +visually-hidden()
+
+body.using-mouse *:focus,
+body.using-touch *:focus
+  outline: none
+
+body.using-keyboard *:not(.no-outline):focus
+  outline: 2px solid Highlight
+
+  @supports (outline-color: -webkit-focus-ring-color)
+    outline: 2px auto -webkit-focus-ring-color
+
+.no-outline
+  outline: none
+
+.swiper-wrapper
+  will-change: transform
+  backface-visibility: hidden
+
+@keyframes background-paused
+  from
+    background-position: 0 0
+  to
+    background-position: 50% 50%
+
+@keyframes background-playing
+  from
+    background-position: 50% 50%
+  to
+    background-position: 100% 100%
+
+@keyframes fadeDash
+  from
+    opacity: 1
+  to
+    opacity: 0
+
+@keyframes spin
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+
+/* Exit Icon
+
+@keyframes animationOneReverse
+  0%
+    transform: rotate(315deg)
+
+  25%
+    transform: rotate(360deg)
+
+  50%, 100%
+    transform: rotate(0deg)
+
+
+@keyframes animationOne
+  0%, 50%
+    transform: rotate(0deg)
+
+  75%
+    transform: rotate(360deg)
+
+  100%
+    transform: rotate(315deg)
+
+
+@keyframes animationTwoReverse
+  0%
+    transform: rotate(405deg)
+
+  25%
+    transform: rotate(450deg)
+
+  50%, 100%
+    transform: rotate(0deg)
+
+
+@keyframes animationTwo
+  0%, 50%
+    transform: rotate(0deg)
+
+  75%
+    transform: rotate(450deg)
+
+  100%
+    transform: rotate(405deg)
+
+/* Burger Icon
+
+
+@keyframes animationBurgerTopReverse
+  0%, 50%
+    transform: translateY(9px)
+    opacity: 0
+
+  51%
+    transform: translateY(9px)
+    opacity: 1
+
+  100%
+    transform: translateY(0px)
+    opacity: 1
+
+
+@keyframes animationBurgerTop
+  0%
+    transform: translateY(0px)
+    opacity: 1
+
+  50%
+    transform: translateY(9px)
+    opacity: 1
+
+  51%, 100%
+    transform: translateY(9px)
+    opacity: 0
+
+
+@keyframes animationBurgerBottomReverse
+  0%, 50%
+    transform: translateY(-9px)
+    opacity: 0
+
+  51%
+    transform: translateY(-9px)
+    opacity: 1
+
+  100%
+    transform: translateY(0px)
+    opacity: 1
+
+
+@keyframes animationBurgerBottom
+  0%
+    transform: translateY(0px)
+    opacity: 1
+
+  50%
+    transform: translateY(-9px)
+    opacity: 1
+
+  51%, 100%
+    transform: translateY(-9px)
+    opacity: 0
+
+canvas#about-canvas
+  display: block
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 1
+  pointer-events: none
+
+.js-tilt-glare-inner
+  backface-visibility: hidden

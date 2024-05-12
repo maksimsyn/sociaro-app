@@ -1,0 +1,121 @@
++b('projects')
+  padding-top: 196px
+  padding-bottom: 196px
+
+  +e('inner')
+    padding-left: 50px
+    display: flex
+
+  +e('item')
+    &:not(:last-of-type)
+      margin-bottom: 10px
+
+  +e('link')
+    color: transparent
+    -webkit-text-stroke: $color-semiblack
+    -webkit-text-stroke-width: 1px
+    position: relative
+
+    +ie()
+      color: $color-white
+      text-shadow: -1px -1px 0 $color-semiblack, 1px -1px 0 $color-semiblack, 1px 0 $color-semiblack, 1px 1px 0 $color-semiblack
+
+    &::before
+      content: attr(data-name)
+      display: inline-block
+      height: 100%
+      color: $color-semiblack
+      position: absolute
+      left: 0
+      top: 0
+      font-size: inherit
+      line-height: initial
+      width: 0
+      overflow: hidden
+      backface-visibility: hidden
+      transition: all 0.3s ease-out
+      white-space: nowrap
+
+    &:hover
+      &::before
+        width: 100%
+
+      &::after
+        transform: none
+        opacity: 1
+
+    &::after
+      content: attr(data-counter)
+      display: inline-block
+      font-size: 32px
+      line-height: 1
+      color: $color-semiblack
+      position: absolute
+      top: -20px
+      left: -50px
+      transform: translateY(100%)
+      opacity: 0
+      transition: all 0.4s ease-in-out
+
+      +ie()
+        text-shadow: none
+
+  +e('col')
+    +m('left')
+      width: calc(40vw - 50px)
+
+    +m('right')
+      position: fixed
+      right: 0
+      top: 50%
+      transform: translateY(-50%)
+      width: 50vw
+      max-width: 828px
+      height: 404px
+      overflow: hidden
+
+  +e('pic-list')
+    width: 100%
+    height: 100%
+    position: relative
+
+  +e('pic-item')
+    width: 100%
+    position: absolute
+    top: 0
+    left: 0
+
+  +e('figure')
+    width: 100%
+    height: inherit
+    opacity: 0
+
+  +e('inner')
+    backface-visibility: hidden
+    will-change: transform
+
+  +e('pic-item')
+    height: inherit
+
+  +e('picture')
+    width: inherit
+    height: inherit
+
+  +e('img')
+    height: inherit
+    width: 100%
+
+  +e('down')
+    transform: translateX(-50%) rotate(90deg)
+    position: fixed
+    left: 50%
+    fill: none
+    bottom: 80px
+
+  +e('next')
+    position: fixed
+    bottom: 80px
+    right: calc((100% - 1280px) / 2 + 30px)
+
+
+

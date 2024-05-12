@@ -1,0 +1,67 @@
++b('slider')
+  +e('goal-slide')
+    box-sizing: border-box
+    width: 500px
+    padding-bottom: 40px
+    transform-style: preserve-3d
+    transform: perspective(1000px)
+
+    &:first-of-type
+      margin-left: 6.25%
+
+    +media($screen-xl)
+      &:first-of-type
+        margin-left: calc((100% - 1280px) / 2 + 20px)
+
+  +e('goal-title')
+    padding-left: 50px
+    transform: translateY(55%) translateZ(20px)
+
+  +e('goal-slider')
+    .swiper-wrapper
+      align-items: flex-end
+
+  +e('dragger')
+    max-width: 1240px
+    margin: 0 auto
+    width: 100%
+    border-bottom: 1px solid $color-grey
+    position: relative
+    z-index: 10
+
+  +e('dragger-bound')
+    width: 248px
+    height: 2px
+    top: -0.5px
+    background: $color-black
+    font-size: 0
+    position: absolute
+
+    &::before
+      content: ''
+      width: 100%
+      height: 60px
+      position: absolute
+      left: 0
+      top: -30px
+
+  +e('goal-drag')
+    box-sizing: border-box
+    width: 87.5%
+    margin: 0 auto
+    max-width: 1240px
+    padding-top: 24px
+    padding-bottom: 64px
+    display: flex
+    align-items: center
+
+  +e('goal-arrow')
+    stroke: $color-semiblack
+    fill: none
+
+    +m('left')
+      transform: rotate(180deg)
+      margin-right: 12px
+
+    +m('right')
+      margin-left: 12px

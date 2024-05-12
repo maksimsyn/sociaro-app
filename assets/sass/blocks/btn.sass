@@ -1,0 +1,46 @@
++b('btn')
+  box-sizing: border-box
+  display: inline-flex
+  justify-content: center
+  text-align: center
+  font-weight: 500
+  font-size: 12px
+  line-height: 42px
+  letter-spacing: 2px
+  border-radius: 3px
+  border: 1px solid transparent
+  text-transform: uppercase
+  padding-left: 40px
+  padding-right: 40px
+  transition: all 0.2s ease-out
+  user-select: none
+
+  +m('color')
+    +m('red')
+      backface-visibility: hidden
+      border-color: $color-red
+      color: $color-red
+      background-size: 410% 410%
+      background-image: radial-gradient(circle, #FF3F00 0%, #FF0047 50%, transparent 50.5%, transparent 100%)
+      background-position: 0 0
+      transition: background 0.8s, color 0.3s
+      animation: background-playing .8s ease forwards
+
+      &:hover
+        color: $color-white
+        animation: background-paused .8s ease forwards
+
+    +m('black')
+      color: $color-semiblack
+      border-color: rgba($color-semiblack, 0.4)
+      background-size: 410% 410%
+      background-image: radial-gradient(circle, $color-black 0%, $color-black 50%, transparent 50.5%, transparent 100%)
+      background-position: 0 0
+      transition: background 0.8s, color 0.3s
+      animation: background-playing .8s ease forwards
+
+      &:hover
+        color: $color-white
+        animation: background-paused .8s ease forwards
+
+
