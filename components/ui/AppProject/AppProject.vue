@@ -102,7 +102,7 @@
 
     AppSlider(:slides='goals' data-animation='fade-up' data-delay='200').project__goals.will-change
 
-    AppVideo(:link='"https://www.youtube.com/embed/GOrbaqwdFFM?rel=0"' data-animation='fade-up' data-delay='200').project__video.will-change
+    AppVideo(:link='"https://www.youtube.com/embed/1jBYmLuCe8o?si=WZIQgegqgoc3jbK_"' data-animation='fade-up' data-delay='200').project__video.will-change
 
     .project__solutions.will-change(data-animation='fade-up' data-delay='200')
       .project__container.container
