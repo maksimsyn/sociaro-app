@@ -1,22 +1,52 @@
-# sociaro
+<h3 align="center">Sociaro</h3>
 
-> My super Nuxt.js project
+<h4 align="center">
+Многостраничный сайт для компании Sociaro 
+</h4>
 
-## Build Setup
+<p align="center">
+<img alt='Превью' src="https://github.com/maksimsyn/sociaro-app/blob/main/docs/demo.png">
+</p>
 
-``` bash
-# install dependencies
-$ npm run install
+## Демо 👀
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+### [ДЕМО](https://funny-fox-70f73d.netlify.app/)
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+## Стек технологий ⚙️
 
-# generate static project
-$ npm run generate
-```
+* Vue.js
+* Nuxt.js
+* Vuex
+* SASS
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## Команды 📜
+
+<table>
+  <thead>
+    <tr>
+      <th>Команда</th>
+      <th>Результат</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td width="30%"><code>npm i</code></td>
+      <td>Установить зависимости</td>
+    </tr>
+    <tr>
+      <td><code>npm run dev</code></td>
+      <td>Запустить сервер разработки localhost:3000 с hot-reloading.</td>
+    </tr>
+    <tr>
+      <td><code>npm run build</code></td>
+      <td>Собрать приложение webpack'ом и минифицировать JS & CSS (для продакшн-версии).</td>
+    </tr>
+  </tbody>
+</table>
+
+## Поддержка браузерами 🌎
+
+| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari-ios/safari-ios_48x48.png" alt="iOS Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>iOS Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Opera | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/yandex/yandex_48x48.png" alt="Yandex" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)<br/>Yandex |
+| --------- | --------- | --------- | --------- | --------- | --------- | --------- |
+| IE11, Edge| last 2 versions| last 2 versions| last 2 versions| last 2 versions| last 2 versions| last 2 versions
+
